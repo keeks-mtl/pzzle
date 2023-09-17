@@ -1,6 +1,4 @@
 import * as React from "react";
-// import AppBar from "@mui/material/AppBar";
-// import Box from "@mui/material/Box";
 import {
   AppBar,
   Box,
@@ -47,7 +45,7 @@ function Navbar() {
                 xs: "none",
                 md: "flex",
                 fontSize: "40px",
-                color: "orange",
+                color: "#ea5d2d",
               },
               mr: 1,
             }}
@@ -134,7 +132,7 @@ function Navbar() {
                   xs: "flex",
                   md: "none",
                   fontSize: "40px",
-                  color: "orange",
+                  color: "#ea5d2d",
                 },
                 mr: 1,
               }}
@@ -156,7 +154,7 @@ function Navbar() {
             <MenuItem>
               <Button
                 variant="outlined"
-                sx={{ borderColor: "orange", color: "orange" }}
+                sx={{ borderColor: "#ea5d2d", color: "#ea5d2d" }}
               >
                 Login
               </Button>
@@ -165,7 +163,7 @@ function Navbar() {
               <Button
                 variant="contained"
                 disableElevation
-                sx={{ backgroundColor: "orange", color: "white" }}
+                sx={{ backgroundColor: "#ea5d2d", color: "white" }}
               >
                 Register
               </Button>
