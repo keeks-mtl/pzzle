@@ -22,3 +22,24 @@ a {
 .orange-link {
   color: #ea5d2d;
 }
+
+
+@media (max-width:600px) {
+  .contact-box, .contact-image-box  {
+    border-radius: 5%;
+    margin: 0px 10px 50px 10px
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .contact-box  {
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    margin-left: 10px;
+  }
+  .contact-image-box{
+    margin-right: 10px;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+  }
+}

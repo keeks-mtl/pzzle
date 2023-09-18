@@ -6,22 +6,21 @@ const Contact = () => {
   return (
     <>
       <Grid container justifyContent="center" mt={8}>
-        <Grid item sm={5} lg={3}>
+        <Grid item xs={12} sm={6} lg={5} xl={3}>
           <Box
             p={5}
             sx={{
               height: "540px",
               backgroundColor: "#fbf8f6",
-              borderTopLeftRadius: "5%",
-              borderBottomLeftRadius: "5%",
               textAlign: "left",
             }}
+            className="contact-box"
           >
             <Typography variant="h3">Contact Us</Typography>
             <Typography variant="subtitle2" sx={{ mt: 2, mb: 2 }}>
               We're here to help! Send us your query via the form below or send
               us an email at{" "}
-              <a href="mailto:helpdesk@pzzle.com">helpdesk@pzzle.com</a> for any
+              <a href="mailto:helpdesk@pzzle.com" className="orange-link">helpdesk@pzzle.com</a> for any
               issue your're facing
             </Typography>
             <FormControl sx={{width: "85%"}}>
@@ -47,8 +46,8 @@ const Contact = () => {
                 variant="filled"
                 margin="normal"
                 multiline
-                rows={7}
-                maxRows={7}
+                rows={5}
+                maxRows={5}
                 sx={{  resize: "none" }}
               ></TextField>
               <Button    variant="contained"
@@ -57,13 +56,12 @@ const Contact = () => {
             </FormControl>
           </Box>
         </Grid>
-        <Grid item sm={5} lg={3}>
+        <Grid item xs={12} sm={6} lg={5} xl={3}>
           <Box
+          className="contact-image-box"
             sx={{
               height: "620px",
               backgroundColor: "#ea5d2d",
-              borderTopRightRadius: "5%",
-              borderBottomRightRadius: "5%",
             }}
           >
             <img
