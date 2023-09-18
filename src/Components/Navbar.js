@@ -11,15 +11,40 @@ import {
   Container,
   Tooltip,
   MenuItem,
+  Modal,
+  TextField,
+  FormControl,
+  Avatar,
+  FormGroup,
+  Stack,
+  Divider,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExtensionIcon from "@mui/icons-material/Extension";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import GoogleIcon from "@mui/icons-material/Google";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 const pages = ["Rules", "Play", "Disclaimers", "Contact"];
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+  textAlign: "center",
+};
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [open, setOpen] = React.useState(false);
+  const [modalType, setModalType] = React.useState("login");
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -28,6 +53,13 @@ function Navbar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const handleOpenModal = (mode) => {
+    setModalType(mode);
+    setOpen(true);
+  };
+
+  const handleCloseModal = () => setOpen(false);
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -157,6 +189,7 @@ function Navbar() {
             <MenuItem>
               <Button
                 variant="outlined"
+                onClick={() => handleOpenModal("login")}
                 sx={{ borderColor: "#ea5d2d", color: "#ea5d2d" }}
               >
                 Login
@@ -166,6 +199,7 @@ function Navbar() {
               <Button
                 variant="contained"
                 disableElevation
+                onClick={() => handleOpenModal("register")}
                 sx={{ backgroundColor: "#ea5d2d", color: "white" }}
               >
                 Register
@@ -174,6 +208,70 @@ function Navbar() {
           </Box>
         </Toolbar>
       </Container>
+      <Modal open={open} onClose={handleCloseModal}>
+        <Box sx={style}>
+          <Typography id="modal-title" variant="h4" component="h2">
+            {modalType === "login" ? "Login" : "Register"}
+          </Typography>
+          <FormControl>
+            <TextField
+              required
+              id="email"
+              label="Email"
+              variant="outlined"
+              margin="normal"
+            ></TextField>
+            <TextField
+              required
+              id="password"
+              label="Password"
+              variant="outlined"
+              margin="normal"
+              type="password"
+            ></TextField>
+            <Button
+              variant="contained"
+              disableElevation
+              sx={{
+                backgroundColor: "#ea5d2d",
+                marginTop: "15px",
+                borderRadius: "50px",
+              }}
+            >
+              {modalType === "login" ? "Login" : "Register"}
+            </Button>
+            <Typography
+              id="modal-modal-description"
+              variant="subtitle2"
+              sx={{ my: 3 }}
+            >
+              or use a social network
+            </Typography>
+            <Stack direction="row" spacing={2} justifyContent="center">
+              <Avatar sx={{ backgroundColor: "#26a7de" }}>
+                <TwitterIcon />
+              </Avatar>
+              <Avatar sx={{ backgroundColor: "#DB4437" }}>
+                <GoogleIcon />
+              </Avatar>
+              <Avatar sx={{ backgroundColor: "#3b5998" }}>
+                <FacebookIcon />
+              </Avatar>
+            </Stack>
+            <Divider sx={{ my: 3 }} />
+            <Typography
+              id="modal-modal-description"
+              variant="subtitle1"
+              sx={{}}
+            >
+              {modalType === "login" ? "Not a member yet? " : "Already a member? "}
+              <a href="" className="orange-link">
+              {modalType === "login" ? "Register" : "Login"}
+              </a>
+            </Typography>
+          </FormControl>
+        </Box>
+      </Modal>
     </AppBar>
   );
 }
