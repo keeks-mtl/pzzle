@@ -5,6 +5,7 @@ import Home from "./Components/Home";
 import Play from "./Components/Play";
 import Rules from "./Components/Rules";
 import Contact from "./Components/Contact";
+import Disclaimers from "./Components/Disclaimers";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/rules" element={<Rules />} />
           <Route path="/play" element={<Play />} />
+          <Route path="/disclaimers" element={<Disclaimers />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
