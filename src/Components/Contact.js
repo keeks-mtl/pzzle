@@ -62,12 +62,13 @@ const Contact = () => {
             sx={{
               height: "620px",
               backgroundColor: "#ea5d2d",
+              display:"flex"
             }}
           >
             <img
               src={puzzleQ}
               alt="illustration of people working on a puzzle"
-              style={{ height: "50%", margin: "auto", position:"relative", top:"20%" }}
+              style={{ height: "50%", margin: "auto", position:"relative" }}
             />
           </Box>
         </Grid>
