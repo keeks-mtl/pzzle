@@ -9,7 +9,7 @@ import Disclaimers from "./Components/Disclaimers";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -20,7 +20,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 

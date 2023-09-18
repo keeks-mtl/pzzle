@@ -23,23 +23,26 @@ a {
   color: #ea5d2d;
 }
 
-
 @media (max-width:600px) {
-  .contact-box, .contact-image-box  {
+  .contact-box, .contact-image-box, .disclaimer-box  {
     border-radius: 5%;
-    margin: 0px 10px 50px 10px
+    margin: 0px 10px 50px 10px;
+    height: 340px;
   }
+
 }
 
 @media screen and (min-width: 601px) {
-  .contact-box  {
+  .contact-box, .disclaimer-box  {
     border-top-left-radius: 5%;
     border-bottom-left-radius: 5%;
     margin-left: 10px;
+    height: 540px;
   }
-  .contact-image-box{
+  .contact-image-box, .disclaimer-img-box {
     margin-right: 10px;
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
+    height: 540px;
   }
 }
