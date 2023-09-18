@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Grid, Box, Typography, Stack } from "@mui/material";
+import { Link } from "react-router-dom";
+import { Grid, Box, Typography, Stack, Button } from "@mui/material";
 import ExtensionIcon from "@mui/icons-material/Extension";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
@@ -44,6 +45,12 @@ const Play = () => {
             >
               Best of luck with solving!
             </Typography>
+            <Link to="/rules">
+            <Button variant="contained"
+                disableElevation
+                sx={{ backgroundColor: "#ea5d2d" }}> Rules </Button>
+            </Link>
+            
           </Box>
         </Grid>
         <Grid item lg={6}>
