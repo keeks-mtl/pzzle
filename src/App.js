@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Play from "./Components/Play";
+import Rules from "./Components/Rules";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/rules" element={<Rules />} />
           <Route path="/play" element={<Play />} />
         </Routes>
       </BrowserRouter>
