@@ -57,6 +57,7 @@ function Navbar() {
   const handleOpenModal = (mode) => {
     setModalType(mode);
     setOpen(true);
+    setAnchorElNav(null);
   };
 
   const handleCloseModal = () => setOpen(false);
@@ -64,6 +65,11 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const handleModalToggle = () => {
+    // Toggle the modalType between "login" and "register"
+    setModalType(modalType === 'login' ? 'register' : 'login');
+  };
+
 
   return (
     <AppBar
@@ -99,7 +105,7 @@ function Navbar() {
                 textDecoration: "none",
               }}
             >
-              Pzzle1
+              Pzzle
             </Typography>
           </Link>
 
@@ -137,10 +143,10 @@ function Navbar() {
                   <Link to={`/${page.toLocaleLowerCase()}`}>{page}</Link>
                 </MenuItem>
               ))}
-              <MenuItem>
+              <MenuItem onClick={() => handleOpenModal("login")}>
                 <Typography textAlign="center">Login</Typography>
               </MenuItem>
-              <MenuItem>
+              <MenuItem onClick={() => handleOpenModal("register")}>
                 <Typography textAlign="center">Register</Typography>
               </MenuItem>
             </Menu>
@@ -172,7 +178,7 @@ function Navbar() {
                 mr: 1,
               }}
             />
-            Pzzle2
+            Pzzle
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -265,7 +271,7 @@ function Navbar() {
               sx={{}}
             >
               {modalType === "login" ? "Not a member yet? " : "Already a member? "}
-              <a href="" className="orange-link">
+              <a href="#" className="orange-link" onClick={handleModalToggle}>
               {modalType === "login" ? "Register" : "Login"}
               </a>
             </Typography>
