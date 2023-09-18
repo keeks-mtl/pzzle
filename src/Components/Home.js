@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Box, Button, Typography } from "@mui/material";
 import puzzlePieces from "../Assets/jigsaw-puzzle-pieces.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -34,6 +35,7 @@ const Home = () => {
               </Typography>
             </Grid>
             <Grid item lg={4} mt={3}>
+              <Link to="/play">
               <Button
                 variant="contained"
                 disableElevation
@@ -41,6 +43,8 @@ const Home = () => {
               >
                 Play Now
               </Button>
+              </Link>
+              
             </Grid>
           </Grid>
         </Box>
