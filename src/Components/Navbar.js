@@ -76,7 +76,7 @@ function Navbar() {
       position="static"
       sx={{ backgroundColor: "white", boxShadow: "none" }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" className="navbar-container">
         <Toolbar disableGutters>
           <ExtensionIcon
             sx={{
@@ -87,14 +87,16 @@ function Navbar() {
                 color: "#ea5d2d",
               },
               mr: 1,
+              ml: 5,
             }}
           />
           <Link to="/">
             <Typography
-              variant="h6"
+              variant="h4"
               noWrap
               component="a"
               href="/"
+              className="logo-text"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -105,7 +107,7 @@ function Navbar() {
                 textDecoration: "none",
               }}
             >
-              Pzzle
+              Pzzle 2
             </Typography>
           </Link>
 
@@ -182,19 +184,31 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block" }}
+              <Link to={`/${page.toLocaleLowerCase()}`}>
+              <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                href="/"
+                sx={{
+                  mr: 7,
+                  display: { xs: "none", md: "flex" },
+                  fontFamily: "monospace",
+                  fontWeight: 500,
+                  color: "black",
+                  textDecoration: "none",
+                }}
               >
-                <Link to={`/${page.toLocaleLowerCase()}`}>{page}</Link>
-              </Button>
+                {page}
+              </Typography>
+            </Link>
             ))}
           </Box>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <MenuItem>
               <Button
                 variant="outlined"
+                className="login-button"
                 onClick={() => handleOpenModal("login")}
                 sx={{ borderColor: "#ea5d2d", color: "#ea5d2d" }}
               >
@@ -204,6 +218,7 @@ function Navbar() {
             <MenuItem>
               <Button
                 variant="contained"
+                className="register-button"
                 disableElevation
                 onClick={() => handleOpenModal("register")}
                 sx={{ backgroundColor: "#ea5d2d", color: "white" }}

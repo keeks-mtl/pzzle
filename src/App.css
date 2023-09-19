@@ -21,6 +21,15 @@ a {
   color: #ea5d2d;
 }
 
+.navbar-container a :hover {
+  text-decoration: underline;
+  color: #ea5d2d;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
+  background-color: transparent!important;
+}
+
 @media (max-width:600px) {
   .contact-box, .contact-image-box, .disclaimer-box  {
     border-radius: 5%;
@@ -75,6 +84,17 @@ a {
   }
 }
 
+@media (min-width: 900px) {
+  .MuiTypography-h4.logo-text{
+    margin-right: 3.5rem;
+    font-size: 1.5rem;
+  }
+  .navbar-container a {
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+}
+
 @media (min-width:1200px) {
   .rules-box.MuiBox-root {
     margin-left: 15px;
@@ -88,10 +108,28 @@ a {
     height: 630px;
     background-size: 100%;
   }
+  .MuiTypography-h4.logo-text{
+    margin-right: 5rem;
+    font-size: 1.5rem;
+  }
+  .navbar-container a {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+  }
 }
 
 @media (min-width:1900px) {
   .home-banner-box{
     height: 1150px;
+  }
+  .navbar-container.css-19r6kue-MuiContainer-root {
+    max-width: 100%!important;
+  }
+
+  .MuiTypography-h4.logo-text{
+    font-size: 2.125rem;
+  }
+  .navbar-container a {
+    text-transform: capitalize;
   }
 }
