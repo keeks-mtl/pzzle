@@ -1,134 +1,179 @@
+/* Base styles for the entire application */
 .App {
   text-align: center;
 }
+
+/* Styles for the jigsaw puzzle component */
 .jigsaw-puzzle {
   border: 2px solid grey;
   margin: auto;
 }
+
+/* Styles for message text */
 .message-text {
   display: flex;
   align-items: center;
 }
+
+/* Styles for message box */
 .message-box {
   display: flex;
   justify-content: center;
 }
+
+/* Anchor link styles */
 a {
   text-decoration: none;
   color: black;
 }
+
+/* Orange-colored link styles */
 .orange-link {
   color: #ea5d2d;
 }
 
-.navbar-container a :hover {
+/* Navbar link hover styles */
+.navbar-container a:hover {
   text-decoration: underline;
   color: #ea5d2d;
 }
 
+/* Override styles for MuiButtonBase and MuiMenuItem on hover */
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
 
-@media (max-width:600px) {
-  .contact-box, .contact-image-box, .disclaimer-box  {
+/* Media queries for responsive design */
+/* Small screens (max-width: 600px) */
+@media (max-width: 600px) {
+  /* Contact, disclaimer, and home banner styles */
+  .contact-box, .contact-image-box, .disclaimer-box {
     border-radius: 5%;
     margin: 0px 10px 50px 10px;
     height: 340px;
   }
+
+  /* Adjust jigsaw puzzle size */
   .jigsaw-puzzle {
     margin-bottom: 30px;
     width: 90%;
   }
-  .home-banner-box{
+
+  /* Rotate and adjust home banner */
+  .home-banner-box {
     height: 400px;
     background-size: 700px;
     transform: rotate(90deg);
   }
+
+  /* Adjust home heading box height and h1 font size */
   .home-heading-box {
-    height: 470px!important;
+    height: 470px !important;
   }
+
   .home-heading-box > h1 {
     font-size: 8rem;
   }
 }
 
+/* Medium screens (min-width: 601px) */
 @media screen and (min-width: 601px) {
-  .contact-box, .disclaimer-box  {
+  /* Contact and disclaimer styles */
+  .contact-box, .disclaimer-box {
     border-top-left-radius: 5%;
     border-bottom-left-radius: 5%;
     margin-left: 10px;
     height: 540px;
   }
+
+  /* Contact image and disclaimer image styles */
   .contact-image-box, .disclaimer-img-box {
     margin-right: 10px;
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
     height: 540px;
   }
+
+  /* Adjust jigsaw puzzle size */
   .jigsaw-puzzle {
     width: 90%;
   }
-  .home-banner-box{
+
+  /* Adjust home banner height */
+  .home-banner-box {
     height: 520px;
     background-size: 350px;
   }
+
+  /* Adjust h1 font size in home heading box */
   .home-heading-box > h1 {
     font-size: 8rem;
   }
 }
 
-@media (min-width: 400px) and (max-width:899px) {
-  .jigsaw-box.MuiBox-root {
-    margin-bottom: 105px;
-  }
-}
-
+/* Large screens (min-width: 900px) */
 @media (min-width: 900px) {
-  .MuiTypography-h4.logo-text{
+  /* Adjust logo text size and navbar link text size */
+  .MuiTypography-h4.logo-text {
     margin-right: 3.5rem;
     font-size: 1.5rem;
   }
+
   .navbar-container a {
     text-transform: capitalize;
     font-size: 1rem;
   }
 }
 
-@media (min-width:1200px) {
+/* Extra-large screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  /* Adjust rules box size and jigsaw puzzle size */
   .rules-box.MuiBox-root {
     margin-left: 15px;
     margin-right: 15px;
     height: 640px;
   }
+
   .jigsaw-puzzle {
     width: 70%;
   }
-  .home-banner-box{
+
+  /* Adjust home banner size and logo text size */
+  .home-banner-box {
     height: 630px;
     background-size: 100%;
   }
-  .MuiTypography-h4.logo-text{
+
+  .MuiTypography-h4.logo-text {
     margin-right: 5rem;
     font-size: 1.5rem;
   }
+
+  /* Adjust navbar link text size and spacing */
   .navbar-container a {
     font-size: 1.5rem;
     margin-right: 2rem;
   }
 }
 
-@media (min-width:1900px) {
-  .home-banner-box{
+/* Extra-extra-large screens (min-width: 1900px) */
+@media (min-width: 1900px) {
+  /* Adjust home banner height */
+  .home-banner-box {
     height: 1150px;
   }
+
+  /* Override max-width for navbar container */
   .navbar-container.css-19r6kue-MuiContainer-root {
-    max-width: 100%!important;
+    max-width: 100% !important;
   }
 
-  .MuiTypography-h4.logo-text{
+  /* Adjust logo text size */
+  .MuiTypography-h4.logo-text {
     font-size: 2.125rem;
   }
+
+  /* Transform navbar link text */
   .navbar-container a {
     text-transform: capitalize;
   }
