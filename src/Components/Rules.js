@@ -29,7 +29,11 @@ const Rules = () => {
             <img
               src={lightbulb}
               alt="Lightbulb puzzle illustration"
-              style={{ height: "250px", justifySelf: "center", marginTop: "30px" }}
+              style={{
+                height: "250px",
+                justifySelf: "center",
+                marginTop: "30px",
+              }}
             />
             <Typography variant="h4" p={4}>
               Look at the puzzle and think about how the pieces might fit
@@ -52,7 +56,11 @@ const Rules = () => {
             <img
               src={moveImg}
               alt="Puzzle piece movement illustration"
-              style={{ height: "250px", justifySelf: "center", marginTop: "30px" }}
+              style={{
+                height: "250px",
+                justifySelf: "center",
+                marginTop: "30px",
+              }}
             />
             <Typography variant="h4" p={4}>
               Move the puzzle pieces around to find their correct positions
@@ -75,7 +83,11 @@ const Rules = () => {
             <img
               src={workImg}
               alt="People working on a puzzle illustration"
-              style={{ height: "250px", justifySelf: "center", marginTop: "30px" }}
+              style={{
+                height: "250px",
+                justifySelf: "center",
+                marginTop: "30px",
+              }}
             />
             <Typography variant="h4" p={4}>
               Once a piece is in the correct position, it can't be moved again
@@ -98,7 +110,11 @@ const Rules = () => {
             <img
               src={fitPuzzle}
               alt="Puzzle pieces fitting together illustration"
-              style={{ height: "250px", justifySelf: "center", marginTop: "30px" }}
+              style={{
+                height: "250px",
+                justifySelf: "center",
+                marginTop: "30px",
+              }}
             />
             <Typography variant="h4" p={4}>
               Try to place all puzzle pieces correctly to complete the puzzle
