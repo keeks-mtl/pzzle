@@ -157,6 +157,7 @@ function Navbar() {
             </Menu>
           </Box>
           {/* Desktop Menu */}
+          <Link to="/pzzle">
           <Typography
             variant="h5"
             noWrap
@@ -186,6 +187,7 @@ function Navbar() {
             />
             Pzzle
           </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Link to={`/${page.toLocaleLowerCase()}`} key={page}>
