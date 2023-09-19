@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Grid, Box, Typography, Stack, Button } from "@mui/material";
+import { Grid, Box, Typography, Button } from "@mui/material";
 import ExtensionIcon from "@mui/icons-material/Extension";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
@@ -8,7 +8,9 @@ import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 const Play = () => {
   return (
     <div>
+      {/* Main Grid Container */}
       <Grid container mt={8} justifyContent="center">
+        {/* Jigsaw Puzzle */}
         <Grid item xs={12} sm={10} md={6} lg={6}>
           <Box className="jigsaw-box">
             <JigsawPuzzle
@@ -18,6 +20,7 @@ const Play = () => {
             />
           </Box>
         </Grid>
+        {/* Game Instructions */}
         <Grid item xs={10} sm={10} md={4} lg={3}>
           <Box
             sx={{
@@ -52,20 +55,19 @@ const Play = () => {
             >
               Best of luck with solving!
             </Typography>
+            {/* Link to Rules */}
             <Link to="/rules" style={{ justifySelf: "center" }}>
               <Button
                 variant="contained"
                 disableElevation
                 sx={{ backgroundColor: "#ea5d2d", marginBottom: "30px" }}
               >
-                {" "}
-                Rules{" "}
+                Rules
               </Button>
             </Link>
           </Box>
         </Grid>
       </Grid>
-      ;
     </div>
   );
 };
