@@ -10,7 +10,7 @@ const Contact = () => {
           <Box
             p={5}
             sx={{
-              height: "540px",
+              height: "620px",
               backgroundColor: "#fbf8f6",
               textAlign: "left",
             }}
