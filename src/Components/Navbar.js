@@ -90,7 +90,7 @@ function Navbar() {
             }}
           />
           {/* Logo Link */}
-          <Link to="/">
+          <Link to="/pzzle">
             <Typography
               variant="h4"
               noWrap
