@@ -31,6 +31,17 @@ a {
     margin-bottom: 30px;
     width: 90%;
   }
+  .home-banner-box{
+    height: 400px;
+    background-size: 700px;
+    transform: rotate(90deg);
+  }
+  .home-heading-box {
+    height: 470px!important;
+  }
+  .home-heading-box > h1 {
+    font-size: 8rem;
+  }
 }
 
 @media screen and (min-width: 601px) {
@@ -49,6 +60,13 @@ a {
   .jigsaw-puzzle {
     width: 90%;
   }
+  .home-banner-box{
+    height: 520px;
+    background-size: 350px;
+  }
+  .home-heading-box > h1 {
+    font-size: 8rem;
+  }
 }
 
 @media (min-width: 400px) and (max-width:899px) {
@@ -65,5 +83,15 @@ a {
   }
   .jigsaw-puzzle {
     width: 70%;
+  }
+  .home-banner-box{
+    height: 630px;
+    background-size: 100%;
+  }
+}
+
+@media (min-width:1900px) {
+  .home-banner-box{
+    height: 1150px;
   }
 }

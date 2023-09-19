@@ -1,24 +1,27 @@
 import React from "react";
 import { Grid, Box, Button, Typography } from "@mui/material";
-import puzzlePieces from "../Assets/jigsaw-puzzle-pieces.png";
+import homePuzzle from "../Assets/home-banner.png";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <Grid container mt={8}>
-      <Grid item lg={4}>
+      <Grid item sm={3} lg={4} xl={4}>
         <Box
+        className="home-banner-box"
           sx={{
-            height: 640,
-            backgroundImage: `url(${puzzlePieces})`,
-            backgroundPosition: "center",
+            backgroundImage: `url(${homePuzzle})`,
+            backgroundPosition: "99% 40%",
+            xs:'none',
           }}
         ></Box>
       </Grid>
-      <Grid item lg={4}>
+      <Grid item xs={10} sm={6} lg={4} xl={4}>
         <Box
+        className="home-heading-box"
           sx={{
-            height: 640,
+            height: 630,
+            paddingLeft: "5%",
           }}
         >
           <Typography variant="h1" sx={{ fontSize: "12rem" }}>
@@ -49,12 +52,13 @@ const Home = () => {
           </Grid>
         </Box>
       </Grid>
-      <Grid item lg={4}>
+      <Grid item xs={12} sm={3} lg={4} xl={4}>
         <Box
+        className="home-banner-box"
           sx={{
-            height: 640,
-            backgroundImage: `url(${puzzlePieces})`,
-            backgroundPosition: "65% 60%",
+            backgroundImage: `url(${homePuzzle})`,
+            backgroundPosition: "99% 40%",
+            transform: "scaleX(-1)",
           }}
         ></Box>
       </Grid>
