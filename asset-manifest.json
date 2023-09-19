@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pzzle/static/css/main.62033f68.css",
-    "main.js": "/pzzle/static/js/main.1f279e4a.js",
+    "main.js": "/pzzle/static/js/main.dfd0ca82.js",
     "static/media/home-banner.png": "/pzzle/static/media/home-banner.37d245564e47c9ce90c1.png",
     "static/media/puzzle-idea.png": "/pzzle/static/media/puzzle-idea.5d7815f7f2adb389e4ea.png",
     "static/media/puzzle-question.png": "/pzzle/static/media/puzzle-question.0b5f83f8dd9e70118c01.png",
@@ -11,10 +11,10 @@
     "static/media/think-puzzle.png": "/pzzle/static/media/think-puzzle.457dbb95d5fcb13cc37b.png",
     "index.html": "/pzzle/index.html",
     "main.62033f68.css.map": "/pzzle/static/css/main.62033f68.css.map",
-    "main.1f279e4a.js.map": "/pzzle/static/js/main.1f279e4a.js.map"
+    "main.dfd0ca82.js.map": "/pzzle/static/js/main.dfd0ca82.js.map"
   },
   "entrypoints": [
     "static/css/main.62033f68.css",
-    "static/js/main.1f279e4a.js"
+    "static/js/main.dfd0ca82.js"
   ]
 }
