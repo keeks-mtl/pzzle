@@ -107,7 +107,7 @@ function Navbar() {
                 textDecoration: "none",
               }}
             >
-              Pzzle 2
+              Pzzle
             </Typography>
           </Link>
 
