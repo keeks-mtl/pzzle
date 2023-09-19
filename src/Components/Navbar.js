@@ -9,13 +9,11 @@ import {
   Typography,
   Menu,
   Container,
-  Tooltip,
   MenuItem,
   Modal,
   TextField,
   FormControl,
   Avatar,
-  FormGroup,
   Stack,
   Divider,
 } from "@mui/material";
@@ -65,11 +63,11 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
   const handleModalToggle = () => {
     // Toggle the modalType between "login" and "register"
-    setModalType(modalType === 'login' ? 'register' : 'login');
+    setModalType(modalType === "login" ? "register" : "login");
   };
-
 
   return (
     <AppBar
@@ -78,6 +76,7 @@ function Navbar() {
     >
       <Container maxWidth="xl" className="navbar-container">
         <Toolbar disableGutters>
+          {/* Extension Icon */}
           <ExtensionIcon
             sx={{
               display: {
@@ -90,6 +89,7 @@ function Navbar() {
               ml: 5,
             }}
           />
+          {/* Logo Link */}
           <Link to="/">
             <Typography
               variant="h4"
@@ -110,7 +110,7 @@ function Navbar() {
               Pzzle
             </Typography>
           </Link>
-
+          {/* Mobile Menu */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -153,6 +153,7 @@ function Navbar() {
               </MenuItem>
             </Menu>
           </Box>
+          {/* Desktop Menu */}
           <Typography
             variant="h5"
             noWrap
@@ -184,27 +185,28 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link to={`/${page.toLocaleLowerCase()}`}>
-              <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                href="/"
-                sx={{
-                  mr: 7,
-                  display: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
-                  fontWeight: 500,
-                  color: "black",
-                  textDecoration: "none",
-                }}
-              >
-                {page}
-              </Typography>
-            </Link>
+              <Link to={`/${page.toLocaleLowerCase()}`} key={page}>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="a"
+                  href="/"
+                  sx={{
+                    mr: 7,
+                    display: { xs: "none", md: "flex" },
+                    fontFamily: "monospace",
+                    fontWeight: 500,
+                    color: "black",
+                    textDecoration: "none",
+                  }}
+                >
+                  {page}
+                </Typography>
+              </Link>
             ))}
           </Box>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            {/* Login and Register Buttons */}
             <MenuItem>
               <Button
                 variant="outlined"
@@ -229,6 +231,7 @@ function Navbar() {
           </Box>
         </Toolbar>
       </Container>
+      {/* Modal for Login/Register */}
       <Modal open={open} onClose={handleCloseModal}>
         <Box sx={style}>
           <Typography id="modal-title" variant="h4" component="h2">
@@ -269,6 +272,7 @@ function Navbar() {
               or use a social network
             </Typography>
             <Stack direction="row" spacing={2} justifyContent="center">
+              {/* Social Network Icons */}
               <Avatar sx={{ backgroundColor: "#26a7de" }}>
                 <TwitterIcon />
               </Avatar>
@@ -285,9 +289,11 @@ function Navbar() {
               variant="subtitle1"
               sx={{}}
             >
-              {modalType === "login" ? "Not a member yet? " : "Already a member? "}
+              {modalType === "login"
+                ? "Not a member yet? "
+                : "Already a member? "}
               <a href="#" className="orange-link" onClick={handleModalToggle}>
-              {modalType === "login" ? "Register" : "Login"}
+                {modalType === "login" ? "Register" : "Login"}
               </a>
             </Typography>
           </FormControl>
@@ -296,4 +302,5 @@ function Navbar() {
     </AppBar>
   );
 }
+
 export default Navbar;
