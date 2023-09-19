@@ -90,7 +90,7 @@ function Navbar() {
             }}
           />
           {/* Logo Link */}
-          <Link to="/">
+          <Link to="/pzzle">
             <Typography
               variant="h4"
               noWrap
@@ -140,6 +140,9 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
+              <MenuItem onClick={handleCloseNavMenu}>
+                  <Link to="/pzzle">Home</Link>
+                </MenuItem>
               {pages.map((page) => (
                 <MenuItem onClick={handleCloseNavMenu}>
                   <Link to={`/${page.toLocaleLowerCase()}`}>{page}</Link>
@@ -158,7 +161,7 @@ function Navbar() {
             variant="h5"
             noWrap
             component="a"
-            href="/"
+            href="/pzzle"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
